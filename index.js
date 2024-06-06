@@ -10,6 +10,10 @@ const customers = [];
 
 let bookingIdCounter = 1;
 
+app.get('/', (req, res) => {
+    res.send('Welcome!');
+  });
+
 //create a room
 app.post('/rooms',  (req, res) => {
     const { name, amenities, pricePerHour, seatsAvailable } = req.body;
